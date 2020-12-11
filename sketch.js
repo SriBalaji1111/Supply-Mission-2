@@ -26,20 +26,11 @@ function setup() {
 	helicopterSprite.addImage(helicopterIMG)
 	helicopterSprite.scale=0.6
 
-	//groundSprite=createSprite(width/2, height-35, width,10);
-	//groundSprite.shapeColor=color(255)
-
-
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 20 , {restitution:0.2, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 20 , {restitution:0.6, isStatic:true});
 	World.add(world, packageBody);
-
-
-	//Create a Ground
-	//ground = Bodies.rectangle(width/2, 650, width, 10 , {isStatic:true} );
- 	//World.add(world, ground);
 
 	box2 = new Box(500,650,20,100,"red");
 	box3 = new Box(295,650,20,100,"red");
